@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+
+	<title>Task Manager</title>
+</head>
+<body>
+	<h1>Task Manager</h1>
+	
+	<!-- User creation form -->
+	<form>
+		<h2>Add User</h2>
+		<label for="user-name">Name:</label>
+		<input type="text" id="user-name" name="user-name" required>
+		<button type="submit">Add User</button>
+	</form>
+	
+	<!-- Task creation form -->
+	<form>
+		<h2>Create Task</h2>
+		<label for="task-user">User:</label>
+		<select id="task-user" name="task-user" required>
+			<option value="">Select user</option>
+			<!-- User options will be dynamically generated here -->
+		</select>
+		<label for="task-name">Name:</label>
+		<input type="text" id="task-name" name="task-name" required>
+		<label for="task-due-date">Due Date:</label>
+		<input type="date" id="task-due-date" name="task-due-date" required>
+		<button type="submit">Create Task</button>
+	</form>
+	
+	<!-- Task list -->
+	<h2>Task List</h2>
+	<label for="task-name-filter">Filter by Task Name:</label>
+	<input type="text" id="task-name-filter" name="task-name-filter">
+	<label for="task-status-filter">Filter by Status:</label>
+	<select id="task-status-filter" name="task-status-filter">
+		<option value="">All</option>
+		<option value="pending">Pending</option>
+		<option value="completed">Completed</option>
+	</select>
+	<label for="task-due-date-filter">Filter by Due Date:</label>
+	<input type="date" id="task-due-date-filter" name="task-due-date-filter">
+	<table>
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>Name</th>
+				<th>Due Date</th>
+				<th>Status</th>
+				<th>Actions</th>
+                
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Task rows will be dynamically generated here -->
+		</tbody>
+	</table>
+    <script src="script.js"></script>
+</body>
+</html>
